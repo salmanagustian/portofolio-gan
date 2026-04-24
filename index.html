@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salman Muhammad — Backend Engineer</title>
+  <meta name="description" content="Backend Engineer specializing in distributed systems, real-time architecture, and high-performance APIs. 500K+ users served.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/grid.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <!-- ── Navigation ── -->
+  <nav class="nav">
+    <span class="nav-logo">SM.dev</span>
+    <ul class="nav-links">
+      <li><a href="#about">// about</a></li>
+      <li><a href="#projects">// projects</a></li>
+      <li><a href="#stack">// stack</a></li>
+      <li><a href="#experience">// experience</a></li>
+      <li><a href="#contact">// contact</a></li>
+    </ul>
+    <span class="nav-rev">REV.01</span>
+  </nav>
+
+  <!-- ── Hero ── -->
+  <section id="hero" class="hero">
+    <div class="container">
+      <div class="hero-inner">
+
+        <div class="hero-content">
+          <p class="hero-text hero-annotation">// BACKEND_ENGINEER — NODE_001 / DISTRIBUTED_SYSTEMS</p>
+          <h1 class="hero-text hero-name">Salman<br><span>Agustian.</span></h1>
+          <p class="hero-text hero-title">Backend Engineer &amp; Systems Architect</p>
+          <p class="hero-text hero-desc">
+            Building the distributed systems and high-throughput APIs that modern
+            platforms depend on. Node.js &amp; NestJS engineer with 5+ years shipping
+            real-time, event-driven architectures for 500K+ users.
+          </p>
+          <div class="hero-text hero-cta">
+            <a href="#projects" class="btn-primary">View Projects</a>
+            <a href="#contact" class="btn-ghost">Get in Touch</a>
+          </div>
+        </div>
+
+        <!-- Animated system architecture schematic -->
+        <div class="hero-schematic">
+          <svg viewBox="0 0 380 320" xmlns="http://www.w3.org/2000/svg" fill="none"
+               style="width:100%;max-width:420px;" aria-label="System architecture diagram">
+            <defs>
+              <pattern id="hgrid" width="24" height="24" patternUnits="userSpaceOnUse">
+                <path d="M 24 0 L 0 0 0 24" fill="none" stroke="rgba(26,58,107,0.45)" stroke-width="0.5"/>
+              </pattern>
+              <marker id="arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+                <path d="M0,0 L0,6 L6,3 z" fill="#7EC8E3" opacity="0.85"/>
+              </marker>
+              <marker id="arr-dim" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+                <path d="M0,0 L0,6 L6,3 z" fill="#6A8FA8" opacity="0.7"/>
+              </marker>
+            </defs>
+
+            <rect width="380" height="320" fill="url(#hgrid)"/>
+
+            <!-- Outer frame -->
+            <rect class="svg-draw svg-draw-d1 svg-measure" x="10" y="10" width="360" height="300"
+                  stroke="#1A3A6B" stroke-width="1"/>
+
+            <!-- Corner ticks -->
+            <g stroke="#7EC8E3" stroke-width="1" opacity="0.5">
+              <line x1="10" y1="10" x2="22" y2="10"/><line x1="10" y1="10" x2="10" y2="22"/>
+              <line x1="370" y1="10" x2="358" y2="10"/><line x1="370" y1="10" x2="370" y2="22"/>
+              <line x1="10" y1="310" x2="22" y2="310"/><line x1="10" y1="310" x2="10" y2="298"/>
+              <line x1="370" y1="310" x2="358" y2="310"/><line x1="370" y1="310" x2="370" y2="298"/>
+            </g>
+
+            <!-- CLIENT -->
+            <rect class="svg-draw svg-draw-d2 svg-measure" x="20" y="136" width="64" height="32"
+                  stroke="#6A8FA8" stroke-width="1"/>
+            <text class="svg-fade svg-fade-d2" x="52" y="156"
+                  font-family="'IBM Plex Mono',monospace" font-size="8.5" fill="#6A8FA8"
+                  text-anchor="middle" letter-spacing="0.08em">CLIENT</text>
+
+            <!-- CLIENT → API_GATEWAY -->
+            <line class="svg-draw svg-draw-d3 svg-measure" x1="84" y1="152" x2="116" y2="152"
+                  stroke="#7EC8E3" stroke-width="1" marker-end="url(#arr)"/>
+            <text class="svg-fade svg-fade-d3" x="100" y="146" font-family="'IBM Plex Mono',monospace"
+                  font-size="7" fill="#7EC8E3" text-anchor="middle" letter-spacing="0.06em">HTTP/2</text>
+
+            <!-- API_GATEWAY -->
+            <rect class="svg-draw svg-draw-d3 svg-measure" x="116" y="120" width="100" height="64"
+                  stroke="#7EC8E3" stroke-width="1.5"/>
+            <text class="svg-fade svg-fade-d3" x="166" y="146" font-family="'IBM Plex Mono',monospace"
+                  font-size="8.5" fill="#C4E1F0" text-anchor="middle" letter-spacing="0.08em">API_GATEWAY</text>
+            <text class="svg-fade svg-fade-d3" x="166" y="162" font-family="'IBM Plex Mono',monospace"
+                  font-size="7" fill="#6A8FA8" text-anchor="middle">NestJS v10</text>
+            <circle class="svg-fade svg-fade-d3" cx="116" cy="152" r="3" fill="#0A1628" stroke="#7EC8E3" stroke-width="1"/>
+            <circle class="svg-fade svg-fade-d3" cx="216" cy="152" r="3" fill="#0A1628" stroke="#7EC8E3" stroke-width="1"/>
+
+            <!-- API_GATEWAY → AUTH_SERVICE -->
+            <line class="svg-draw svg-draw-d4 svg-measure" x1="166" y1="120" x2="166" y2="76"
+                  stroke="#7EC8E3" stroke-width="1" marker-end="url(#arr)"/>
+            <text class="svg-fade svg-fade-d4" x="178" y="100" font-family="'IBM Plex Mono',monospace"
+                  font-size="7" fill="#7EC8E3" letter-spacing="0.06em">JWT</text>
+
+            <!-- AUTH_SERVICE -->
+            <rect class="svg-draw svg-draw-d4 svg-measure" x="116" y="40" width="100" height="36"
+                  stroke="#7EC8E3" stroke-width="1"/>
+            <text class="svg-fade svg-fade-d4" x="166" y="62" font-family="'IBM Plex Mono',monospace"
+                  font-size="8.5" fill="#C4E1F0" text-anchor="middle" letter-spacing="0.08em">AUTH_SERVICE</text>
+
+            <!-- API_GATEWAY → MSG_BROKER -->
+            <line class="svg-draw svg-draw-d4 svg-measure" x1="216" y1="152" x2="252" y2="152"
+                  stroke="#7EC8E3" stroke-width="1" marker-end="url(#arr)"/>
+            <text class="svg-fade svg-fade-d4" x="234" y="146" font-family="'IBM Plex Mono',monospace"
+                  font-size="7" fill="#7EC8E3" text-anchor="middle" letter-spacing="0.06em">gRPC</text>
+
+            <!-- MSG_BROKER -->
+            <rect class="svg-draw svg-draw-d5 svg-measure" x="252" y="120" width="100" height="64"
+                  stroke="#7EC8E3" stroke-width="1.5"/>
+            <text class="svg-fade svg-fade-d5" x="302" y="146" font-family="'IBM Plex Mono',monospace"
+                  font-size="8.5" fill="#C4E1F0" text-anchor="middle" letter-spacing="0.08em">MSG_BROKER</text>
+            <text class="svg-fade svg-fade-d5" x="302" y="162" font-family="'IBM Plex Mono',monospace"
+                  font-size="7" fill="#6A8FA8" text-anchor="middle">Kafka</text>
+
+            <!-- MSG_BROKER → DATABASE -->
+            <line class="svg-draw svg-draw-d6 svg-measure" x1="302" y1="184" x2="302" y2="224"
+                  stroke="#7EC8E3" stroke-width="1" marker-end="url(#arr)"/>
+            <text class="svg-fade svg-fade-d6" x="316" y="206" font-family="'IBM Plex Mono',monospace"
+                  font-size="7" fill="#7EC8E3" letter-spacing="0.06em">TCP</text>
+
+            <!-- API_GATEWAY → DATABASE (dashed) -->
+            <path class="svg-draw svg-draw-d5 svg-measure"
+                  d="M 166 184 L 166 254 L 252 254"
+                  stroke="#6A8FA8" stroke-width="1" stroke-dasharray="4 3"
+                  marker-end="url(#arr-dim)"/>
+            <text class="svg-fade svg-fade-d5" x="196" y="248" font-family="'IBM Plex Mono',monospace"
+                  font-size="7" fill="#6A8FA8" letter-spacing="0.06em">SQL/TCP</text>
+
+            <!-- DATABASE -->
+            <rect class="svg-draw svg-draw-d6 svg-measure" x="252" y="224" width="100" height="60"
+                  stroke="#7EC8E3" stroke-width="1.5"/>
+            <ellipse class="svg-fade svg-fade-d6" cx="302" cy="236" rx="38" ry="6"
+                     stroke="#7EC8E3" stroke-width="1" fill="none"/>
+            <text class="svg-fade svg-fade-d6" x="302" y="262" font-family="'IBM Plex Mono',monospace"
+                  font-size="8.5" fill="#C4E1F0" text-anchor="middle" letter-spacing="0.08em">DATABASE</text>
+            <text class="svg-fade svg-fade-d6" x="302" y="276" font-family="'IBM Plex Mono',monospace"
+                  font-size="7" fill="#6A8FA8" text-anchor="middle">PostgreSQL</text>
+
+            <!-- CACHE -->
+            <rect class="svg-draw svg-draw-d7 svg-measure" x="84" y="240" width="72" height="32"
+                  stroke="#6A8FA8" stroke-width="1"/>
+            <text class="svg-fade svg-fade-d7" x="120" y="260" font-family="'IBM Plex Mono',monospace"
+                  font-size="8.5" fill="#6A8FA8" text-anchor="middle" letter-spacing="0.08em">CACHE</text>
+            <text class="svg-fade svg-fade-d7" x="120" y="272" font-family="'IBM Plex Mono',monospace"
+                  font-size="7" fill="#6A8FA8" text-anchor="middle">Redis</text>
+            <line class="svg-draw svg-draw-d7 svg-measure" x1="166" y1="256" x2="156" y2="256"
+                  stroke="#6A8FA8" stroke-width="1" marker-end="url(#arr-dim)"/>
+
+            <!-- Title block -->
+            <rect class="svg-fade svg-fade-d7" x="18" y="276" width="58" height="26"
+                  stroke="#1A3A6B" stroke-width="1" fill="rgba(10,22,40,0.85)"/>
+            <text class="svg-fade svg-fade-d7" x="47" y="287" font-family="'IBM Plex Mono',monospace"
+                  font-size="6" fill="#6A8FA8" text-anchor="middle" letter-spacing="0.1em">SYS.ARCH</text>
+            <text class="svg-fade svg-fade-d7" x="47" y="297" font-family="'IBM Plex Mono',monospace"
+                  font-size="6" fill="#6A8FA8" text-anchor="middle" letter-spacing="0.08em">REV.01/2024</text>
+          </svg>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── About ── -->
+  <section id="about">
+    <div class="container">
+      <div class="section-divider reveal">
+        <span class="section-label">// SECTION_01 — ABOUT</span>
+      </div>
+      <h2 class="section-title reveal">About <span>the system.</span></h2>
+      <div class="about-grid">
+        <div class="about-box reveal">
+          <p class="about-text">
+            I'm a backend engineer with <strong>5+ years of experience</strong> building the
+            distributed systems and APIs that modern platforms depend on. My work lives in the
+            layer most users never see — but feel immediately when something goes wrong.
+          </p>
+          <p class="about-text">
+            I specialize in <strong>real-time and event-driven architectures</strong>, with a
+            focus on systems that handle high concurrency without sacrificing data consistency.
+            I've shipped production systems across SaaS, logistics, and fintech — each with
+            different constraints and trade-offs.
+          </p>
+          <p class="about-text">
+            I think carefully about <strong>scalability and business fit</strong>: when a
+            monolith is the right call, and when microservices earn their complexity. I prefer
+            systems that are boring at 3am and fast at 3pm.
+          </p>
+        </div>
+        <div class="about-facts reveal">
+          <div class="fact-row">
+            <span class="fact-label">Location</span>
+            <span class="fact-value">Indonesia</span>
+          </div>
+          <div class="fact-row">
+            <span class="fact-label">Primary Stack</span>
+            <span class="fact-value">Node.js / NestJS</span>
+          </div>
+          <div class="fact-row">
+            <span class="fact-label">Databases</span>
+            <span class="fact-value">PostgreSQL / Redis</span>
+          </div>
+          <div class="fact-row">
+            <span class="fact-label">Messaging</span>
+            <span class="fact-value">Kafka</span>
+          </div>
+          <div class="fact-row">
+            <span class="fact-label">Users Served</span>
+            <span class="fact-value">500K+</span>
+          </div>
+          <div class="fact-row">
+            <span class="fact-label">Experience</span>
+            <span class="fact-value">5+ Years</span>
+          </div>
+          <div class="fact-row">
+            <span class="fact-label">Status</span>
+            <span class="fact-value fact-value--accent">Open to Roles</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Projects ── -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-divider reveal">
+        <span class="section-label">// SECTION_02 — PROJECTS</span>
+      </div>
+      <h2 class="section-title reveal">Selected <span>deployments.</span></h2>
+      <div class="projects-grid reveal-group">
+
+        <article class="project-card reveal">
+          <p class="project-num">PROJ.001 / 2024</p>
+          <h3 class="project-name">Real-time Order Processing API</h3>
+          <p class="project-desc">High-throughput order ingestion pipeline for a logistics platform. Kafka-backed queue with idempotent consumer pattern handles burst traffic with zero message loss.</p>
+          <ul class="project-tags">
+            <li class="tag">Node.js</li><li class="tag">Kafka</li>
+            <li class="tag">PostgreSQL</li><li class="tag">Redis</li>
+          </ul>
+          <p class="project-metric">↑ 200K+ daily orders processed</p>
+        </article>
+
+        <article class="project-card reveal">
+          <p class="project-num">PROJ.002 / 2024</p>
+          <h3 class="project-name">Auth &amp; Session Service</h3>
+          <p class="project-desc">Centralized authentication for a multi-tenant SaaS platform. JWT with sliding sessions, refresh token rotation, and Redis-backed session store for sub-millisecond lookups.</p>
+          <ul class="project-tags">
+            <li class="tag">NestJS</li><li class="tag">Redis</li>
+            <li class="tag">JWT</li><li class="tag">PostgreSQL</li>
+          </ul>
+          <p class="project-metric">↑ Serves 500K+ active users</p>
+        </article>
+
+        <article class="project-card reveal">
+          <p class="project-num">PROJ.003 / 2023</p>
+          <h3 class="project-name">Event-driven Data Pipeline</h3>
+          <p class="project-desc">Schema-on-read ETL pipeline ingesting raw events from upstream services. TypeScript consumers with exactly-once processing semantics and dead-letter queue handling.</p>
+          <ul class="project-tags">
+            <li class="tag">TypeScript</li><li class="tag">Kafka</li>
+            <li class="tag">PostgreSQL</li><li class="tag">Docker</li>
+          </ul>
+          <p class="project-metric">↑ 1M+ events processed per day</p>
+        </article>
+
+        <article class="project-card reveal">
+          <p class="project-num">PROJ.004 / 2023</p>
+          <h3 class="project-name">API Gateway &amp; Rate Limiter</h3>
+          <p class="project-desc">In-house API gateway with per-client rate limiting and dynamic routing. Redis sliding window algorithm for precise enforcement without race conditions.</p>
+          <ul class="project-tags">
+            <li class="tag">Node.js</li><li class="tag">Redis</li><li class="tag">NestJS</li>
+          </ul>
+          <p class="project-metric">↓ 40% reduction in downstream load</p>
+        </article>
+
+        <article class="project-card reveal">
+          <p class="project-num">PROJ.005 / 2022</p>
+          <h3 class="project-name">Query Optimization Initiative</h3>
+          <p class="project-desc">End-to-end audit and optimization of a PostgreSQL database serving a high-read platform. Strategic indexing and Redis query caching eliminated N+1 patterns at scale.</p>
+          <ul class="project-tags">
+            <li class="tag">PostgreSQL</li><li class="tag">Redis</li><li class="tag">TypeScript</li>
+          </ul>
+          <p class="project-metric">↓ 50% average query latency reduced</p>
+        </article>
+
+        <article class="project-card reveal">
+          <p class="project-num">PROJ.006 / 2022</p>
+          <h3 class="project-name">Monolith → Microservices Migration</h3>
+          <p class="project-desc">Led the strangler fig decomposition of a Node.js monolith into focused services. Zero-downtime migration over 6 months with feature flag-based traffic shifting.</p>
+          <ul class="project-tags">
+            <li class="tag">NestJS</li><li class="tag">Kafka</li>
+            <li class="tag">Docker</li><li class="tag">AWS</li>
+          </ul>
+          <p class="project-metric">↑ Team deployment frequency 4×</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Tech Stack ── -->
+  <section id="stack">
+    <div class="container">
+      <div class="section-divider reveal">
+        <span class="section-label">// SECTION_03 — TECH_STACK</span>
+      </div>
+      <h2 class="section-title reveal">Technology <span>spec sheet.</span></h2>
+      <div class="stack-diagram-wrapper">
+        <div class="stack-grid reveal-group">
+
+          <div class="stack-col reveal">
+            <div class="stack-col-header">LANGUAGES</div>
+            <div class="stack-items">
+              <span class="stack-item stack-item--primary">TypeScript</span>
+              <span class="stack-item stack-item--primary">JavaScript</span>
+              <span class="stack-item stack-item--primary">SQL</span>
+              <span class="stack-item stack-item--secondary">Bash</span>
+            </div>
+          </div>
+
+          <div class="stack-col reveal">
+            <div class="stack-col-header">FRAMEWORKS</div>
+            <div class="stack-items">
+              <span class="stack-item stack-item--primary stack-item--featured">NestJS</span>
+              <span class="stack-item stack-item--primary">Express.js</span>
+              <span class="stack-item stack-item--primary">Fastify</span>
+              <span class="stack-item stack-item--secondary">Prisma ORM</span>
+            </div>
+          </div>
+
+          <div class="stack-col reveal">
+            <div class="stack-col-header">DATA &amp; MESSAGING</div>
+            <div class="stack-items">
+              <span class="stack-item stack-item--primary stack-item--featured">PostgreSQL</span>
+              <span class="stack-item stack-item--primary">Redis</span>
+              <span class="stack-item stack-item--primary stack-item--featured">Kafka</span>
+              <span class="stack-item stack-item--secondary">RabbitMQ</span>
+            </div>
+          </div>
+
+          <div class="stack-col reveal">
+            <div class="stack-col-header">INFRASTRUCTURE</div>
+            <div class="stack-items">
+              <span class="stack-item stack-item--primary">Docker</span>
+              <span class="stack-item stack-item--primary">AWS EC2/RDS</span>
+              <span class="stack-item stack-item--primary">Nginx</span>
+              <span class="stack-item stack-item--secondary">GitHub Actions</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="stack-proficiency reveal">
+          <p class="stack-prof-label">// PROFICIENCY_INDEX</p>
+          <div class="prof-bars">
+            <div class="prof-row">
+              <span class="prof-name">NestJS</span>
+              <div class="prof-track"><div class="prof-fill" style="width:95%"></div></div>
+              <span class="prof-pct">95%</span>
+            </div>
+            <div class="prof-row">
+              <span class="prof-name">PostgreSQL</span>
+              <div class="prof-track"><div class="prof-fill" style="width:98%"></div></div>
+              <span class="prof-pct">98%</span>
+            </div>
+            <div class="prof-row">
+              <span class="prof-name">Kafka</span>
+              <div class="prof-track"><div class="prof-fill" style="width:87%"></div></div>
+              <span class="prof-pct">87%</span>
+            </div>
+            <div class="prof-row">
+              <span class="prof-name">Node.js</span>
+              <div class="prof-track"><div class="prof-fill" style="width:96%"></div></div>
+              <span class="prof-pct">96%</span>
+            </div>
+            <div class="prof-row">
+              <span class="prof-name">Redis</span>
+              <div class="prof-track"><div class="prof-fill" style="width:90%"></div></div>
+              <span class="prof-pct">90%</span>
+            </div>
+            <div class="prof-row">
+              <span class="prof-name">Docker</span>
+              <div class="prof-track"><div class="prof-fill" style="width:84%"></div></div>
+              <span class="prof-pct">84%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Experience ── -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-divider reveal">
+        <span class="section-label">// SECTION_04 — EXPERIENCE</span>
+      </div>
+      <h2 class="section-title reveal">Work <span>history.</span></h2>
+      <div class="timeline reveal-group">
+
+        <div class="timeline-item reveal">
+          <div class="timeline-arrow"></div>
+          <p class="timeline-date">2021.01 — PRESENT</p>
+          <h3 class="timeline-role">Senior Backend Engineer</h3>
+          <p class="timeline-company">Current Company // Indonesia</p>
+          <p class="timeline-desc">Leading backend architecture for a B2B SaaS platform serving 500K+ users. Designed the event-driven order pipeline and centralized auth service. Led the monolith decomposition initiative and reduced API latency by 50% through systematic query optimization and caching.</p>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-arrow"></div>
+          <p class="timeline-date">2019.03 — 2020.12</p>
+          <h3 class="timeline-role">Backend Engineer</h3>
+          <p class="timeline-company">Previous Company // Indonesia</p>
+          <p class="timeline-desc">Built core API services for a logistics platform — order ingestion, tracking, and driver assignment. Introduced Kafka for async processing, replacing a synchronous architecture that couldn't handle peak traffic. Reduced checkout error rate from 4% to 0.1%.</p>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-arrow"></div>
+          <p class="timeline-date">2018.06 — 2019.02</p>
+          <h3 class="timeline-role">Junior Backend Developer</h3>
+          <p class="timeline-company">First Company // Indonesia</p>
+          <p class="timeline-desc">Developed and maintained REST APIs for an e-commerce platform. Focused on payment gateway integrations, inventory management endpoints, and performance improvements to the product catalog search service.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Contact ── -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-divider reveal">
+        <span class="section-label">// SECTION_05 — CONTACT</span>
+      </div>
+      <div class="contact-inner">
+        <div class="reveal">
+          <h2 class="contact-headline">Currently open to<br><span>senior backend</span><br>roles.</h2>
+          <p class="contact-sub">Looking for opportunities where I can work on systems with real scale challenges — teams that care about architecture, not just shipping features.</p>
+          <a href="mailto:hello@salmanmuhammad.dev" class="btn-primary">Send an Email</a>
+        </div>
+        <div class="contact-links reveal">
+          <a href="mailto:hello@salmanmuhammad.dev" class="contact-link">
+            <span class="contact-link__label">Email</span>
+            <span class="contact-link__value">hello@salmanmuhammad.dev</span>
+            <span class="contact-link__arrow">→</span>
+          </a>
+          <a href="https://linkedin.com/in/salmanmuhammad" target="_blank" rel="noopener" class="contact-link">
+            <span class="contact-link__label">LinkedIn</span>
+            <span class="contact-link__value">linkedin.com/in/salmanmuhammad</span>
+            <span class="contact-link__arrow">→</span>
+          </a>
+          <a href="https://github.com/salmanmuhammad" target="_blank" rel="noopener" class="contact-link">
+            <span class="contact-link__label">GitHub</span>
+            <span class="contact-link__value">github.com/salmanmuhammad</span>
+            <span class="contact-link__arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <div class="container">
+      <div class="footer">
+        <span class="footer-copy">© 2024 Salman Muhammad. All systems operational.</span>
+        <span class="footer-note">REV.01 / 2024.04 / SYS.OK</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
