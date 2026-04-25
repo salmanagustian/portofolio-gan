@@ -18,7 +18,9 @@ export default function Experience() {
     <section id="experience">
       <div className="container">
         <div className="section-divider reveal">
-          <span className="section-label">// SECTION_04 — EXPERIENCE</span>
+          <span className="dim-tick" aria-hidden="true" />
+          <span className="section-label">04 / EXPERIENCE</span>
+          <span className="dim-tick" aria-hidden="true" />
         </div>
         <h2 className="section-title reveal">Work <span>history.</span></h2>
 
@@ -27,7 +29,7 @@ export default function Experience() {
           <div style={{
             position: 'absolute',
             top: '8px',
-            left: '0',
+            left: '-4px',
             bottom: '0',
             width: '1px',
             background: '#7EC8E3',

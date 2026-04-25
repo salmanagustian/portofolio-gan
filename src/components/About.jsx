@@ -10,10 +10,12 @@ export default function About() {
   ];
 
   return (
-    <section id="about">
+    <section id="about" className="section-bg-surface">
       <div className="container">
         <div className="section-divider reveal">
-          <span className="section-label">// SECTION_01 — ABOUT</span>
+          <span className="dim-tick" aria-hidden="true" />
+          <span className="section-label">01 / ABOUT</span>
+          <span className="dim-tick" aria-hidden="true" />
         </div>
         <h2 className="section-title reveal">About <span>the system.</span></h2>
 

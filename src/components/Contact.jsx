@@ -20,10 +20,12 @@ const contactLinks = [
 
 export default function Contact() {
   return (
-    <section id="contact">
+    <section id="contact" className="section-bg-surface">
       <div className="container">
         <div className="section-divider reveal">
-          <span className="section-label">// SECTION_05 — CONTACT</span>
+          <span className="dim-tick" aria-hidden="true" />
+          <span className="section-label">05 / CONTACT</span>
+          <span className="dim-tick" aria-hidden="true" />
         </div>
 
         <div className="contact-inner">
@@ -43,6 +45,7 @@ export default function Contact() {
           </div>
 
           <div className="contact-links reveal">
+            <p className="contact-links-label">// CONTACT_ENDPOINTS</p>
             {contactLinks.map(({ label, value, href, external }) => (
               <a
                 key={label}

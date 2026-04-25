@@ -23,9 +23,11 @@ export default function Projects() {
     <section id="projects">
       <div className="container">
         <div className="section-divider reveal">
-          <span className="section-label">// SECTION_02 — PROJECTS</span>
+          <span className="dim-tick" aria-hidden="true" />
+          <span className="section-label">02 / PROJECTS</span>
+          <span className="dim-tick" aria-hidden="true" />
         </div>
-        <h2 className="section-title reveal">Selected <span>deployments.</span></h2>
+        <h2 className="section-title reveal">Selected <span>projects.</span></h2>
 
         <div className="projects-grid reveal-group">
           {projects.map(project => (

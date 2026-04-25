@@ -2,10 +2,12 @@ import { stackCols, proficiency } from '../data/stack';
 
 export default function Stack() {
   return (
-    <section id="stack">
+    <section id="stack" className="section-bg-surface">
       <div className="container">
         <div className="section-divider reveal">
-          <span className="section-label">// SECTION_03 — TECH_STACK</span>
+          <span className="dim-tick" aria-hidden="true" />
+          <span className="section-label">03 / TECH_STACK</span>
+          <span className="dim-tick" aria-hidden="true" />
         </div>
         <h2 className="section-title reveal">Technology <span>spec sheet.</span></h2>
 

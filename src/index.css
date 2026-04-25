@@ -36,37 +36,63 @@ a {
 @media (max-width: 768px)  { .container { padding: 0 24px; } }
 @media (max-width: 480px)  { .container { padding: 0 16px; } }
 
-/* Section divider */
+/* Dimension Line */
 .section-divider {
+  position: relative;
   display: flex;
   align-items: center;
-  gap: 24px;
+  justify-content: space-between;
   margin-bottom: 40px;
+  padding: 4px 0;
 }
 
 .section-divider::before {
   content: '';
-  width: 32px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
   height: 1px;
-  background: #7EC8E3;
-  opacity: 0.5;
+  background: rgba(126, 200, 227, 0.25);
+}
+
+.dim-tick {
+  display: block;
+  width: 1px;
+  height: 10px;
+  background: rgba(126, 200, 227, 0.4);
+  position: relative;
+  z-index: 1;
   flex-shrink: 0;
 }
 
-.section-divider::after {
-  content: '';
-  flex: 1;
-  height: 1px;
-  background: rgba(26,58,107,0.5);
-}
-
 .section-label {
+  position: relative;
+  z-index: 1;
+  padding: 0 20px;
   font-family: 'IBM Plex Mono', monospace;
   font-size: 10px;
   color: #6A8FA8;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   white-space: nowrap;
+}
+
+#about      .section-label { background: #0F2040; }
+#projects   .section-label { background: #0A1628; }
+#stack      .section-label { background: #0F2040; }
+#experience .section-label { background: #0A1628; }
+#contact    .section-label { background: #0F2040; }
+
+/* Surface shift — About, Stack, Contact */
+.section-bg-surface {
+  background-color: #0F2040;
+  background-image:
+    linear-gradient(rgba(26,58,107,0.5) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(26,58,107,0.5) 1px, transparent 1px),
+    linear-gradient(rgba(26,58,107,0.25) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(26,58,107,0.25) 1px, transparent 1px);
+  background-size: 24px 24px, 24px 24px, 6px 6px, 6px 6px;
 }
 
 /* Section title */
@@ -394,7 +420,7 @@ section {
 .about-text {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 15px;
-  color: #6A8FA8;
+  color: #8AABBF;
   line-height: 1.9;
 }
 
@@ -635,7 +661,7 @@ section {
 
 .prof-fill {
   height: 100%;
-  background: rgba(126,200,227,0.22);
+  background: rgba(126,200,227,0.55);
 }
 
 .prof-pct {
@@ -762,6 +788,15 @@ section {
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+.contact-links-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  color: #6A8FA8;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
 }
 
 .contact-link {
