@@ -1,3 +1,5 @@
+import meLineImg from '../assets/me-line.png';
+
 export default function About() {
   const facts = [
     { label: 'Location',      value: 'Indonesia' },
@@ -10,44 +12,58 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="section-bg-surface">
+    <section id="about">
       <div className="container">
         <div className="section-divider reveal">
           <span className="dim-tick" aria-hidden="true" />
-          <span className="section-label">01 / ABOUT</span>
+          <span className="section-label">02 / ABOUT</span>
           <span className="dim-tick" aria-hidden="true" />
         </div>
-        <h2 className="section-title reveal">About <span>the system.</span></h2>
+        <h2 className="section-title reveal">About <span>me.</span></h2>
 
-        <div className="about-grid">
-          <div className="about-box reveal">
-            <p className="about-text">
-              I&apos;m a backend engineer with <strong>5+ years of experience</strong> building the
-              distributed systems and APIs that modern platforms depend on. My work lives in the
-              layer most users never see — but feel immediately when something goes wrong.
-            </p>
-            <p className="about-text">
-              I specialize in <strong>real-time and event-driven architectures</strong>, with a
-              focus on systems that handle high concurrency without sacrificing data consistency.
-              I&apos;ve shipped production systems across SaaS, logistics, and fintech — each with
-              different constraints and trade-offs.
-            </p>
-            <p className="about-text">
-              I think carefully about <strong>scalability and business fit</strong>: when a
-              monolith is the right call, and when microservices earn their complexity. I prefer
-              systems that are boring at 3am and fast at 3pm.
-            </p>
+        <div className="about-grid reveal-group">
+          <div className="about-col-left reveal">
+            <div className="about-portrait">
+              <div className="about-portrait__frame">
+                <span className="bracket bracket--tl" aria-hidden="true" />
+                <span className="bracket bracket--tr" aria-hidden="true" />
+                <span className="bracket bracket--bl" aria-hidden="true" />
+                <span className="bracket bracket--br" aria-hidden="true" />
+                <img src={meLineImg} alt="Portrait of Salman" className="about-portrait__img" />
+                <span className="about-portrait__label">M SALMAN AGUSTIAN // BACKEND MAGANG</span>
+              </div>
+            </div>
           </div>
 
-          <div className="about-facts reveal">
-            {facts.map(({ label, value, accent }) => (
-              <div className="fact-row" key={label}>
-                <span className="fact-label">{label}</span>
-                <span className={accent ? 'fact-value fact-value--accent' : 'fact-value'}>
-                  {value}
-                </span>
-              </div>
-            ))}
+          <div className="about-col-right reveal">
+            <div className="about-bio">
+              <p className="about-text">
+                I&apos;m a backend engineer with <strong>5+ years of experience</strong> building the
+                distributed systems and APIs that modern platforms depend on.
+              </p>
+              <p className="about-text">
+                Specialize in <strong>real-time and event-driven architectures</strong>, with a
+                focus on systems that handle high concurrency without sacrificing data consistency.
+                I&apos;ve shipped production systems across SaaS, logistics, and fintech — each with
+                different constraints and trade-offs.
+              </p>
+            </div>
+
+            <div className="section-divider about-divider" aria-hidden="true">
+              <span className="dim-tick" />
+              <span className="dim-tick" />
+            </div>
+
+            <div className="about-facts">
+              {facts.map(({ label, value, accent }) => (
+                <div className="fact-row" key={label}>
+                  <span className="fact-label">{label}</span>
+                  <span className={accent ? 'fact-value fact-value--accent' : 'fact-value'}>
+                    {value}
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

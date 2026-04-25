@@ -1,6 +1,13 @@
 import { useEffect } from 'react';
+import { useTypewriter } from '../hooks/useTypewriter';
 
 export default function Hero() {
+  const { displayed, done } = useTypewriter(
+    '// BACKEND_ENGINEER / DISTRIBUTED_SYSTEMS',
+    32,
+    500
+  );
+
   useEffect(() => {
     document.querySelectorAll('.svg-measure').forEach(el => {
       let len;
@@ -25,13 +32,14 @@ export default function Hero() {
 
           <div className="hero-content">
             <p className="hero-text hero-annotation">
-              // BACKEND_ENGINEER — NODE_001 / DISTRIBUTED_SYSTEMS
+              {displayed}
+              {done && <span className="typewriter-cursor" aria-hidden="true" />}
             </p>
             <h1 className="hero-text hero-name">
               Salman<br /><span>Agustian.</span>
             </h1>
             <p className="hero-text hero-title">
-              Backend Engineer &amp; Systems Architect
+              Backend Engineer &amp; Technical Lead
             </p>
             <p className="hero-text hero-desc">
               Building the distributed systems and high-throughput APIs that modern
@@ -40,7 +48,7 @@ export default function Hero() {
             </p>
             <div className="hero-text hero-cta">
               <a href="#projects" className="btn-primary">View Projects</a>
-              <a href="#contact" className="btn-ghost">Get in Touch</a>
+              <a href="mailto:salmanmuhammad1976@gmail.com" className="btn-ghost">Get in Touch</a>
             </div>
           </div>
 

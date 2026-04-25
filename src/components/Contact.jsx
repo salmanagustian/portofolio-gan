@@ -1,24 +1,23 @@
+import { useState } from 'react';
+
+const EMAIL = 'salmanmuhammad1976@gmail.com';
+
 const contactLinks = [
-  {
-    label: 'Email',
-    value: 'hello@salmanmuhammad.dev',
-    href: 'mailto:hello@salmanmuhammad.dev',
-  },
-  {
-    label: 'LinkedIn',
-    value: 'linkedin.com/in/salmanmuhammad',
-    href: 'https://linkedin.com/in/salmanmuhammad',
-    external: true,
-  },
-  {
-    label: 'GitHub',
-    value: 'github.com/salmanmuhammad',
-    href: 'https://github.com/salmanmuhammad',
-    external: true,
-  },
+  { label: 'Email',    value: EMAIL,                         href: `mailto:${EMAIL}`,                          copyable: true },
+  { label: 'LinkedIn', value: 'linkedin.com/in/salmanagustian', href: 'https://www.linkedin.com/in/salmanagustian/', external: true },
+  { label: 'GitHub',   value: 'github.com/salmanagustian',   href: 'https://github.com/salmanagustian',        external: true },
 ];
 
 export default function Contact() {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(EMAIL).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    });
+  };
+
   return (
     <section id="contact" className="section-bg-surface">
       <div className="container">
@@ -39,24 +38,30 @@ export default function Contact() {
               Looking for opportunities where I can work on systems with real scale
               challenges — teams that care about architecture, not just shipping features.
             </p>
-            <a href="mailto:hello@salmanmuhammad.dev" className="btn-primary">
+            <a href={`mailto:${EMAIL}`} className="btn-primary">
               Send an Email
             </a>
           </div>
 
           <div className="contact-links reveal">
             <p className="contact-links-label">// CONTACT_ENDPOINTS</p>
-            {contactLinks.map(({ label, value, href, external }) => (
-              <a
-                key={label}
-                href={href}
-                className="contact-link"
-                {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-              >
-                <span className="contact-link__label">{label}</span>
-                <span className="contact-link__value">{value}</span>
-                <span className="contact-link__arrow">→</span>
-              </a>
+            {contactLinks.map(({ label, value, href, external, copyable }) => (
+              <div key={label} className="contact-link-row">
+                <a
+                  href={href}
+                  className="contact-link"
+                  {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                >
+                  <span className="contact-link__label">{label}</span>
+                  <span className="contact-link__value">{value}</span>
+                  <span className="contact-link__arrow">→</span>
+                </a>
+                {copyable && (
+                  <button className="copy-btn" onClick={handleCopy} aria-label="Copy email address">
+                    {copied ? 'COPIED' : 'COPY'}
+                  </button>
+                )}
+              </div>
             ))}
           </div>
         </div>

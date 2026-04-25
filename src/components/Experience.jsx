@@ -1,6 +1,6 @@
 import { experience } from '../data/experience';
 
-function TimelineItem({ date, role, company, desc }) {
+function TimelineItem({ date, role, company, bullets, tech }) {
   return (
     <div className="timeline-item reveal">
       <span className="timeline-dot" aria-hidden="true" />
@@ -8,7 +8,11 @@ function TimelineItem({ date, role, company, desc }) {
       <p className="timeline-date">{date}</p>
       <h3 className="timeline-role">{role}</h3>
       <p className="timeline-company">{company}</p>
-      <p className="timeline-desc">{desc}</p>
+      <ul className="timeline-bullets">
+        {bullets.map((b, i) => (
+          <li key={i} className="timeline-bullet">{b}</li>
+        ))}
+      </ul>
     </div>
   );
 }
@@ -22,20 +26,9 @@ export default function Experience() {
           <span className="section-label">04 / EXPERIENCE</span>
           <span className="dim-tick" aria-hidden="true" />
         </div>
-        <h2 className="section-title reveal">Work <span>history.</span></h2>
+        <h2 className="section-title reveal">Work <span>experiences.</span></h2>
 
-        <div className="timeline reveal-group">
-          {/* Vertical timeline line */}
-          <div style={{
-            position: 'absolute',
-            top: '8px',
-            left: '-4px',
-            bottom: '0',
-            width: '1px',
-            background: '#7EC8E3',
-            opacity: 0.3,
-          }} aria-hidden="true" />
-
+        <div className="timeline">
           {experience.map((item, i) => (
             <TimelineItem key={i} {...item} />
           ))}

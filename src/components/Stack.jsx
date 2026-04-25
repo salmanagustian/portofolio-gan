@@ -39,7 +39,7 @@ export default function Stack() {
                 <div className="prof-row" key={name}>
                   <span className="prof-name">{name}</span>
                   <div className="prof-track">
-                    <div className="prof-fill" style={{ width: `${pct}%` }} />
+                    <div className="prof-fill" style={{ '--pct': `${pct}%` }} />
                   </div>
                   <span className="prof-pct">{pct}%</span>
                 </div>
