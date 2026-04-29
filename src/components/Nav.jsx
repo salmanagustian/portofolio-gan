@@ -94,7 +94,7 @@ export default function Nav() {
   return (
     <>
       <nav className="nav">
-        <span className="nav-logo">SM.dev</span>
+        <a href="#hero" className="nav-logo" onClick={(e) => handleClick(e, '#hero', -1)}>~/.salman</a>
 
         <ul className="nav-links">
           {links.map((link, i) => (
@@ -111,7 +111,6 @@ export default function Nav() {
         </ul>
 
         <div className="nav-right">
-          <span className="nav-rev">REV.01</span>
           <button
             className={['nav-hamburger', menuOpen ? 'nav-hamburger--open' : ''].filter(Boolean).join(' ')}
             onClick={() => setMenuOpen(o => !o)}

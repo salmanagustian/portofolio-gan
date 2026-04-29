@@ -35,8 +35,8 @@ export default function Contact() {
               roles.
             </h2>
             <p className="contact-sub">
-              Looking for opportunities where I can work on systems with real scale
-              challenges — teams that care about architecture, not just shipping features.
+              If you're building something that needs to scale, or a team that values craft over
+              shortcuts — let's talk.
             </p>
             <a href={`mailto:${EMAIL}`} className="btn-primary">
               Send an Email
@@ -57,7 +57,7 @@ export default function Contact() {
                   <span className="contact-link__arrow">→</span>
                 </a>
                 {copyable && (
-                  <button className="copy-btn" onClick={handleCopy} aria-label="Copy email address">
+                  <button className={`copy-btn${copied ? ' copy-btn--copied' : ''}`} onClick={handleCopy} aria-label="Copy email address">
                     {copied ? 'COPIED' : 'COPY'}
                   </button>
                 )}

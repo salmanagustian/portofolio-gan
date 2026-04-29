@@ -58,12 +58,18 @@ function ProjectCard({ num, name, desc, tags, metric, github, live, caseStudy, f
 
 export default function Projects() {
   const [activeTag, setActiveTag] = useState('ALL');
+  const [hasFiltered, setHasFiltered] = useState(false);
 
   const allTags = useMemo(() => {
     const tagSet = new Set();
     projects.forEach(p => p.tags.forEach(t => tagSet.add(t)));
     return ['ALL', ...Array.from(tagSet)];
   }, []);
+
+  const handleTagClick = (tag) => {
+    if (tag !== 'ALL') setHasFiltered(true);
+    setActiveTag(tag);
+  };
 
   const featured = projects.filter(p => p.featured);
   const regular = projects.filter(p => !p.featured);
@@ -84,7 +90,7 @@ export default function Projects() {
             <button
               key={tag}
               className={['filter-btn', activeTag === tag ? 'filter-btn--active' : ''].filter(Boolean).join(' ')}
-              onClick={() => setActiveTag(tag)}
+              onClick={() => handleTagClick(tag)}
             >
               {tag}
             </button>
@@ -96,13 +102,13 @@ export default function Projects() {
             {featured.length > 0 && (
               <div className="projects-featured reveal-group">
                 {featured.map(project => (
-                  <ProjectCard key={project.num} {...project} />
+                  <ProjectCard key={project.num} {...project} noReveal={hasFiltered} />
                 ))}
               </div>
             )}
             <div className="projects-grid reveal-group">
               {regular.map(project => (
-                <ProjectCard key={project.num} {...project} />
+                <ProjectCard key={project.num} {...project} noReveal={hasFiltered} />
               ))}
             </div>
           </>

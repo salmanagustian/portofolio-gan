@@ -1,14 +1,17 @@
-import meLineImg from '../assets/me-line.png';
+import meLineImg from '../assets/me-line-2.png';
+import iconDota from '../assets/icon-dota.png';
+import iconCalisthenics from '../assets/icon-calisthenics.png';
+import iconTerminal from '../assets/icon-terminal.png';
 
 export default function About() {
   const facts = [
-    { label: 'Location',      value: 'Indonesia' },
-    { label: 'Primary Stack', value: 'Node.js / NestJS' },
-    { label: 'Databases',     value: 'PostgreSQL / Redis' },
-    { label: 'Messaging',     value: 'Kafka' },
-    { label: 'Users Served',  value: '500K+' },
-    { label: 'Experience',    value: '5+ Years' },
-    { label: 'Status',        value: 'Open to Roles', accent: true },
+    { label: 'Location',  value: 'Bandung, Indonesia' },
+    { label: 'Stack',     value: 'Node.js / NestJS' },
+    { label: 'Domains',   value: 'Gaming · Healthcare · Fintech · EdTech' },
+    { label: 'Experience', value: '6+ Years' },
+    { label: 'Projects',  value: '10+ shipped' },
+    { label: 'Users',     value: '500K+' },
+    { label: 'Status',    value: 'Open to Roles', accent: true },
   ];
 
   return (
@@ -30,7 +33,14 @@ export default function About() {
                 <span className="bracket bracket--bl" aria-hidden="true" />
                 <span className="bracket bracket--br" aria-hidden="true" />
                 <img src={meLineImg} alt="Portrait of Salman" className="about-portrait__img" />
-                <span className="about-portrait__label">M SALMAN AGUSTIAN // BACKEND MAGANG</span>
+                <span className="about-portrait__label">M SALMAN AGUSTIAN //</span>
+                <div className="about-hobby-icons">
+                  <img src={iconDota} alt="Dota 2" className="about-hobby-icon" />
+                  <div className="about-hobby-icons__right">
+                    <img src={iconCalisthenics} alt="Calisthenics" className="about-hobby-icon" />
+                    <img src={iconTerminal} alt="Terminal" className="about-hobby-icon" />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -38,14 +48,15 @@ export default function About() {
           <div className="about-col-right reveal">
             <div className="about-bio">
               <p className="about-text">
-                I&apos;m a backend engineer with <strong>5+ years of experience</strong> building the
-                distributed systems and APIs that modern platforms depend on.
+                Outside of work: DotA, calisthenics, design, and a recent obsession with <span className="about-nvim">Neovim</span>.
+                The common thread is probably one word — <strong>Improve</strong>. Drawn to things
+                where the ceiling is high and progress is honest.
               </p>
               <p className="about-text">
-                Specialize in <strong>real-time and event-driven architectures</strong>, with a
-                focus on systems that handle high concurrency without sacrificing data consistency.
-                I&apos;ve shipped production systems across SaaS, logistics, and fintech — each with
-                different constraints and trade-offs.
+                That instinct carries into the work. I specialize in{' '}
+                <strong>real-time and event-driven architectures</strong> — systems where consistency
+                matters more than cleverness. I&apos;ve shipped across gaming, healthcare,
+                fintech, and EdTech — each domain with its own constraints and its own lessons.
               </p>
             </div>
 

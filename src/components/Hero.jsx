@@ -42,9 +42,10 @@ export default function Hero() {
               Backend Engineer &amp; Technical Lead
             </p>
             <p className="hero-text hero-desc">
-              Building the distributed systems and high-throughput APIs that modern
-              platforms depend on. Node.js &amp; NestJS engineer with 5+ years shipping
-              real-time, event-driven architectures for 500K+ users.
+              Backend engineer and technical lead with 5+ years shipping distributed
+              systems across gaming, healthcare, fintech, and EdTech. Specialized in real-time
+              and event-driven architectures — from multi-region game backends to
+              high-throughput APIs serving 500K+ users.
             </p>
             <div className="hero-text hero-cta">
               <a href="#projects" className="btn-primary">View Projects</a>
