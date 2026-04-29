@@ -37,6 +37,8 @@ export const stackCols = [
       { label: "Azure", variant: "secondary" },
       { label: "CI/CD", variant: "secondary" },
       { label: "Keycloak", variant: "secondary" },
+      { label: "Grafana", variant: "secondary" },
+      { label: "New Relic", variant: "secondary" },
     ],
   },
 ];

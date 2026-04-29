@@ -76,7 +76,7 @@ export default function Projects() {
   const filtered = activeTag === 'ALL' ? [] : projects.filter(p => p.tags.includes(activeTag));
 
   return (
-    <section id="projects" className="section-bg-surface">
+    <section id="projects">
       <div className="container">
         <div className="section-divider reveal">
           <span className="dim-tick" aria-hidden="true" />

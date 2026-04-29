@@ -19,11 +19,11 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="section-bg-surface">
+    <section id="contact">
       <div className="container">
         <div className="section-divider reveal">
           <span className="dim-tick" aria-hidden="true" />
-          <span className="section-label">05 / CONTACT</span>
+          <span className="section-label">06 / CONTACT</span>
           <span className="dim-tick" aria-hidden="true" />
         </div>
 
