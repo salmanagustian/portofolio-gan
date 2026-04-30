@@ -6,11 +6,11 @@ import iconTerminal from '../assets/icon-terminal.png';
 export default function About() {
   const facts = [
     { label: 'Location',  value: 'Bandung, Indonesia' },
-    { label: 'Stack',     value: 'Node.js / NestJS' },
+    { label: 'Stack',     value: 'Node.js / NestJS · Go' },
     { label: 'Domains',   value: 'Gaming · Healthcare · Fintech · EdTech' },
-    { label: 'Experience', value: '6+ Years' },
+    { label: 'Experience', value: '5+ Years' },
     { label: 'Projects',  value: '10+ shipped' },
-    { label: 'Users',     value: '500K+' },
+    // { label: 'Users',     value: '500K+' },
     { label: 'Status',    value: 'Open to Roles', accent: true },
   ];
 
@@ -48,7 +48,7 @@ export default function About() {
           <div className="about-col-right reveal">
             <div className="about-bio">
               <p className="about-text">
-                Outside of work: DotA, calisthenics, design, and a recent obsession with <span className="about-nvim">Neovim</span>.
+                Outside of work: DotA, calisthenics, and a recent obsession with <span className="about-nvim">Neovim</span>.
                 The common thread is probably one word — <strong>Improve</strong>. Drawn to things
                 where the ceiling is high and progress is honest.
               </p>

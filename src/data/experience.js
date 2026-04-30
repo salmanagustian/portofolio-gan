@@ -9,7 +9,7 @@ export const experience = [
       'Took on technical lead role for Customer Information System — defined backend architecture serving 60+ clinics and 10K+ daily appointments, reducing API latency 40% through query optimization and caching',
       'Built real-time multiplayer game backend handling 1K+ concurrent users and 10K+ daily matches at 99.95% uptime across 4 regions',
     ],
-    tech: ['NestJS', 'TypeScript', 'PostgreSQL', 'Redis', 'Kafka', 'AWS', 'WebSocket', 'Elasticsearch', 'Microservices'],
+    tech: ['NestJS', 'TypeScript', 'Laravel', 'PostgreSQL', 'Redis', 'Kafka', 'AWS', 'WebSocket', 'Elasticsearch', 'Microservices'],
   },
   {
     date: '2020 — 2022',
@@ -19,7 +19,7 @@ export const experience = [
       'Built online tutoring and ERP platform serving 20K+ active students, reducing API response time through caching and automated billing workflows',
       'Developed royalty management platform for music usage across hotels, restaurants, and cafes — automating revenue distribution and percentage-based royalty calculations for artists',
     ],
-    tech: ['PHP', 'CodeIgniter', 'MySQL', 'Redis', 'Payment Gateway'],
+    tech: ['PHP', 'CodeIgniter', 'Laravel', 'MySQL', 'Redis', 'Payment Gateway'],
   },
   {
     date: '2019 — 2020',

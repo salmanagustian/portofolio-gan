@@ -1,12 +1,10 @@
 import { blogPosts } from '../data/blog';
 
 function BlogCard({ date, title, excerpt, tags, url }) {
-  const isArticle = url && !url.match(/^https:\/\/medium\.com\/@[^/]+$/);
   return (
     <article
       className="blog-card reveal"
-      style={isArticle ? undefined : { cursor: 'default' }}
-      onClick={isArticle ? () => window.open(url, '_blank', 'noopener,noreferrer') : undefined}
+      onClick={() => window.open(url, '_blank', 'noopener,noreferrer')}
     >
       <p className="blog-card__date">{date}</p>
       <h3 className="blog-card__title">{title}</h3>
@@ -16,17 +14,15 @@ function BlogCard({ date, title, excerpt, tags, url }) {
           <li className="blog-tag" key={tag}>{tag}</li>
         ))}
       </ul>
-      {isArticle && (
-        <a
-          href={url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="blog-card__cta"
-          onClick={e => e.stopPropagation()}
-        >
-          READ ON MEDIUM →
-        </a>
-      )}
+      <a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="blog-card__cta"
+        onClick={e => e.stopPropagation()}
+      >
+        READ ON MEDIUM →
+      </a>
     </article>
   );
 }

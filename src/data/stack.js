@@ -7,6 +7,7 @@ export const stackCols = [
       { label: "SQL", variant: "primary" },
       { label: "Go", variant: "secondary" },
       { label: "PHP", variant: "secondary" },
+      { label: "Bash", variant: "secondary" },
     ],
   },
   {
@@ -34,7 +35,7 @@ export const stackCols = [
     items: [
       { label: "Docker", variant: "primary" },
       { label: "AWS", variant: "primary" },
-      { label: "Azure", variant: "secondary" },
+      { label: "Azure", variant: "primary" },
       { label: "CI/CD", variant: "secondary" },
       { label: "Keycloak", variant: "secondary" },
       { label: "Grafana", variant: "secondary" },
