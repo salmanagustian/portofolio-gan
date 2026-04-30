@@ -44,7 +44,6 @@ export default function Contact() {
           </div>
 
           <div className="contact-links reveal">
-            <p className="contact-links-label">// CONTACT_ENDPOINTS</p>
             {contactLinks.map(({ label, value, href, external, copyable }) => (
               <div key={label} className="contact-link-row">
                 <a
