@@ -45,7 +45,7 @@ export const stackCols = [
 ];
 
 export const proficiency = [
-  { name: "NestJS", pct: 90 },
+  { name: "NestJS", pct: 95 },
   { name: "PostgreSQL", pct: 90 },
   { name: "Kafka", pct: 70 },
   { name: "Typescript", pct: 90 },

@@ -1,6 +1,6 @@
 export const projects = [
   {
-    num: "Technical Lead / 2022",
+    num: "Technical Lead / 2025",
     name: "Healthcare Information System",
     desc: "Led backend architecture for a clinic management platform serving 60+ clinics and 10K+ daily appointments. Drove 40% API latency reduction through targeted database optimization and caching.",
     tags: ["Node.js",  "NestJS", "Typescript", "PostgreSQL", "Redis"],
@@ -16,7 +16,7 @@ export const projects = [
     ],
   },
   {
-    num: "Backend Engineer / 2023",
+    num: "Backend Engineer / 2024",
     name: "Real-time Gaming Platform",
     desc: "Built distributed real-time backend sustaining 1K+ concurrent users and 10K+ daily matches at 99.95% uptime across 4 global regions. Designed two matchmaking systems — synchronous and async — with AWS GameLift handling latency-based routing per region.",
     tags: ["WebSocket", "AWS GameLift", "AWS SNS", "Redis Pub/Sub", "NestJS", "Typescript", "PostgreSQL"],
@@ -29,6 +29,22 @@ export const projects = [
       "Built synchronous matchmaking for games requiring immediate session creation, and async matchmaking for queue-based games using PostgreSQL SKIP LOCK to prevent race conditions under concurrent worker contention",
       "Designed WebSocket layer with Redis Pub/Sub for cross-instance real-time state synchronization under concurrent load",
       "Achieved 99.95% uptime through fault-tolerant service design and proactive load testing across regions",
+    ],
+  },
+  {
+    num: "Backend Engineer / 2025",
+    name: "Public Legal Data Platform",
+    desc: "Built backend for a public legal data platform surfacing 500+ datasets with full-text search and complex filtering via Elasticsearch. Designed stream-based pipelines for data synchronization and content lifecycle management.",
+    tags: ["Node.js", "NestJS", "Typescript", "PostgreSQL", "Elasticsearch", "Microservices"],
+    metric: "500+ datasets indexed",
+    featured: false,
+    github: null,
+    live: "https://satudata.kejaksaan.go.id",
+    caseStudy: [
+      "Implemented full-text search and multi-criteria filtering using Elasticsearch to improve legal data discoverability",
+      "Built stream-based data pipelines for consistent synchronization between source systems and search indices",
+      "Designed RESTful APIs for efficient delivery of structured legal datasets to public-facing consumers",
+      "Developed back-office modules for dataset and content lifecycle management",
     ],
   },
   {
@@ -61,22 +77,6 @@ export const projects = [
       "Integrated with 2+ external lab partners for test registration and result synchronization",
       "Implemented payment gateway integration for seamless booking checkout flow",
       "Ensured reliable data delivery across distributed services via message queue decoupling",
-    ],
-  },
-  {
-    num: "Backend Engineer / 2025",
-    name: "Public Legal Data Platform",
-    desc: "Built backend for a public legal data platform surfacing 500+ datasets with full-text search and complex filtering via Elasticsearch. Designed stream-based pipelines for data synchronization and content lifecycle management.",
-    tags: ["Node.js", "NestJS", "Typescript", "PostgreSQL", "Elasticsearch", "Microservices"],
-    metric: "500+ datasets indexed",
-    featured: false,
-    github: null,
-    live: "https://satudata.kejaksaan.go.id",
-    caseStudy: [
-      "Implemented full-text search and multi-criteria filtering using Elasticsearch to improve legal data discoverability",
-      "Built stream-based data pipelines for consistent synchronization between source systems and search indices",
-      "Designed RESTful APIs for efficient delivery of structured legal datasets to public-facing consumers",
-      "Developed back-office modules for dataset and content lifecycle management",
     ],
   },
   {
