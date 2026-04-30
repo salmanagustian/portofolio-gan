@@ -19,7 +19,7 @@ export const experience = [
       'Built online tutoring and ERP platform serving 20K+ active students, reducing API response time through caching and automated billing workflows',
       'Developed royalty management platform for music usage across hotels, restaurants, and cafes — automating revenue distribution and percentage-based royalty calculations for artists',
     ],
-    tech: ['PHP', 'CodeIgniter', 'Laravel', 'MySQL', 'Redis', 'Payment Gateway'],
+    tech: ['PHP', 'CodeIgniter', 'Laravel', 'MySQL', 'AWS', 'Redis', 'Payment Gateway'],
   },
   {
     date: '2019 — 2020',

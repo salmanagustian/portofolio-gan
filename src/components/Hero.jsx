@@ -42,7 +42,7 @@ export default function Hero() {
               <span>Agustian.</span>
             </h1>
             <p className="hero-text hero-title">
-              Backend Engineer &amp; Technical Lead
+              Backend Engineer
             </p>
             <p className="hero-text hero-desc">
               5+ years shipping high-performance, event-driven systems — gaming,
@@ -498,7 +498,7 @@ export default function Hero() {
                 textAnchor="middle"
                 letterSpacing="0.08em"
               >
-                REV.01/2024
+                REV.01/2026
               </text>
             </svg>
           </div>
