@@ -45,7 +45,7 @@ export default function Hero() {
               Backend Engineer
             </p>
             <p className="hero-text hero-desc">
-              5+ years shipping high-performance, event-driven systems — gaming,
+              5+ years shipping high-performance, real-time, event-driven systems — gaming,
               healthcare, fintech, and EdTech.{" "}
             </p>
             <div className="hero-text hero-cta">
