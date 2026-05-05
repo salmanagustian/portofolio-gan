@@ -1,5 +1,9 @@
 import { useEffect } from "react";
 import { useTypewriter } from "../hooks/useTypewriter";
+import { useCyclingText } from "../hooks/useCyclingText";
+
+const CYCLING_WORDS = ['DISTRIBUTED_SYSTEMS', 'REAL-TIME', 'EVENT-DRIVEN', 'HIGH-PERFORMANCE'];
+const STATIC_PREFIX = '// BACKEND_ENGINEER / ';
 
 export default function Hero() {
   const { displayed, done } = useTypewriter(
@@ -7,6 +11,8 @@ export default function Hero() {
     32,
     500,
   );
+
+  const { word, phase } = useCyclingText(CYCLING_WORDS, 2000, done);
 
   useEffect(() => {
     document.querySelectorAll(".svg-measure").forEach((el) => {
@@ -31,10 +37,17 @@ export default function Hero() {
         <div className="hero-inner">
           <div className="hero-content">
             <p className="hero-text hero-annotation">
-              {displayed}
-              {done && (
-                <span className="typewriter-cursor" aria-hidden="true" />
+              {done ? (
+                <>
+                  {STATIC_PREFIX}
+                  <span className="cycle-wrap">
+                    <span className={`cycle-keyword cycle-${phase}`}>{word}</span>
+                  </span>
+                </>
+              ) : (
+                displayed
               )}
+              {done && <span className="typewriter-cursor" aria-hidden="true" />}
             </p>
             <h1 className="hero-text hero-name">
               Salman

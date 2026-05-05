@@ -1416,6 +1416,35 @@ footer {
   animation: cursor-blink 800ms step-start infinite;
 }
 
+/* Cycling text (vertical flip ticker in hero annotation) */
+@keyframes cycle-out {
+  from { opacity: 1; transform: translateY(0); }
+  to   { opacity: 0; transform: translateY(-100%); }
+}
+
+@keyframes cycle-in {
+  from { opacity: 0; transform: translateY(100%); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.cycle-wrap {
+  display: inline-block;
+  clip-path: inset(0);
+  line-height: inherit;
+}
+
+.cycle-keyword {
+  display: inline-block;
+}
+
+.cycle-keyword.cycle-exit {
+  animation: cycle-out 350ms ease-in forwards;
+}
+
+.cycle-keyword.cycle-enter {
+  animation: cycle-in 350ms ease-out forwards;
+}
+
 /* Section annotation (// WRITING style label above section title) */
 .section-annotation {
   font-family: 'IBM Plex Mono', monospace;
